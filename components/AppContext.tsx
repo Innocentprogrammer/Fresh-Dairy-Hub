@@ -89,7 +89,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setCart(prevCart => prevCart.filter(item => item.product.id !== productId))
   }
 
-  const login = async (email: string, password: string) => {
+  const login = async (email: string) => {
     // In a real app, you would validate credentials with a backend
     // For this example, we'll just set a user if the email includes "@"
     if (email.includes('@')) {
@@ -99,7 +99,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }
   }
 
-  const signup = async (name: string, email: string, password: string) => {
+  const signup = async (name: string, email: string) => {
     // In a real app, you would send this data to a backend
     // For this example, we'll just set a user if the email includes "@"
     if (email.includes('@')) {
