@@ -9,7 +9,7 @@ export default function Cart() {
   const total = cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0)
   
   const handlePaymentSuccess = () => {
-    // Clear cart using the context function
+    
     clearCart();
   };
   

@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 
 interface PaymentButtonProps {
   amount: number;
-  cartItems: string;
+  cartItems: CartItem[];
   onSuccess?: () => void;
 }
 
