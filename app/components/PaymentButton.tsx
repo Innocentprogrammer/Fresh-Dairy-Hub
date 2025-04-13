@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 
 interface PaymentButtonProps {
   amount: number;
-  cartItems: any[];
+  cartItems: string;
   onSuccess?: () => void;
 }
 
@@ -42,7 +42,11 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({ amount, cartItems, onSucc
         name: 'Fresh Dairy Hub',
         description: `Payment for ${cartItems.length} items`, // Customize description
         order_id: order.id,
-        handler: async function (response: any) {
+        handler: async function (response: {
+          razorpay_order_id: string;
+          razorpay_payment_id: string;
+          razorpay_signature: string;
+        }) {
           try {
             // 3. Verify payment on server
             const verifyResponse = await fetch('/api/payment/verify', {
