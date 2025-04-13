@@ -34,3 +34,61 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+```
+Fresh Dairy Hub
+├─ .eslintrc.json
+├─ app
+│  ├─ auth
+│  │  └─ page.tsx
+│  ├─ cart
+│  │  └─ page.tsx
+│  ├─ components
+│  │  ├─ Footer.tsx
+│  │  ├─ Header.tsx
+│  │  ├─ Map.tsx
+│  │  └─ ProductDetailsModal.tsx
+│  ├─ context
+│  │  └─ AppContext.tsx
+│  ├─ favicon.ico
+│  ├─ fonts
+│  │  ├─ GeistMonoVF.woff
+│  │  └─ GeistVF.woff
+│  ├─ globals.css
+│  ├─ layout.tsx
+│  ├─ login
+│  │  └─ page.tsx
+│  ├─ page.tsx
+│  ├─ products
+│  │  └─ page.tsx
+│  └─ signup
+│     └─ page.tsx
+├─ components
+│  ├─ AppContext.tsx
+│  ├─ Footer.tsx
+│  ├─ Header.tsx
+│  └─ ProductDetailsModal.tsx
+├─ components.json
+├─ lib
+│  └─ utils.ts
+├─ next-env.d.ts
+├─ next.config.mjs
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.mjs
+├─ public
+│  └─ images
+│     ├─ ArtisanCheese.jpg
+│     ├─ Butter.jpg
+│     ├─ CottageCheese.jpg
+│     ├─ Cream.jpg
+│     ├─ FreshDairyProducts.jpg
+│     ├─ FreshMilk.jpg
+│     ├─ IceCream.jpg
+│     ├─ OrganicYogurt.jpg
+│     └─ WhippedCream.jpg
+├─ README.md
+├─ tailwind.config.ts
+└─ tsconfig.json
+
+```

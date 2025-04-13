@@ -27,6 +27,7 @@ type AppContextType = {
   login: (email: string, password: string) => Promise<void>
   signup: (name: string, email: string, password: string) => Promise<void>
   logout: () => void
+  clearCart: () => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined)
@@ -108,13 +109,15 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       throw new Error('Invalid email')
     }
   }
-
+  const clearCart = () => {
+    setCart([]);
+  }
   const logout = () => {
     setUser(null)
   }
 
   return (
-    <AppContext.Provider value={{ cart, addToCart, removeFromCart, user, login, signup, logout }}>
+    <AppContext.Provider value={{ cart, addToCart, removeFromCart, user, login, signup, clearCart, logout }}>
       {children}
     </AppContext.Provider>
   )

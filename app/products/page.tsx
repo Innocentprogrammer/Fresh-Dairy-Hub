@@ -8,14 +8,14 @@ import { useAppContext } from '../context/AppContext'
 import ProductDetailsModal from '../components/ProductDetailsModal'
 
 const products = [
-  { id: 1, name: "Fresh Milk", price: 2.99, image: "/images/FreshMilk.jpg", description: "Farm-fresh milk, rich in nutrients and perfect for your daily needs." },
-  { id: 2, name: "Organic Yogurt", price: 3.99, image: "/images/OrganicYogurt.jpg", description: "Creamy organic yogurt, packed with probiotics for a healthy gut." },
-  { id: 3, name: "Artisan Cheese", price: 5.99, image: "/images/ArtisanCheese.jpg", description: "Hand-crafted artisan cheese, perfect for your cheese board or cooking." },
-  { id: 4, name: "Butter", price: 2.49, image: "/images/Butter.jpg", description: "Creamy, golden butter made from the finest cream." },
-  { id: 5, name: "Cream", price: 3.49, image: "/images/Cream.jpg", description: "Rich, velvety cream perfect for cooking or topping desserts." },
-  { id: 6, name: "Ice Cream", price: 4.99, image: "/images/IceCream.jpg", description: "Delicious, creamy ice cream in various flavors." },
-  { id: 7, name: "Cottage Cheese", price: 3.79, image: "/images/CottageCheese.jpg", description: "Fresh, protein-rich cottage cheese, great for snacks or cooking." },
-  { id: 8, name: "Whipped Cream", price: 2.99, image: "/images/WhippedCream.jpg", description: "Light and fluffy whipped cream, perfect for desserts." },
+  { id: 1, name: "Fresh Milk", price: 60.99, image: "/images/FreshMilk.jpg", description: "Farm-fresh milk, rich in nutrients and perfect for your daily needs." },
+  { id: 2, name: "Organic Yogurt", price: 100.99, image: "/images/OrganicYogurt.jpg", description: "Creamy organic yogurt, packed with probiotics for a healthy gut." },
+  { id: 3, name: "Artisan Cheese", price: 150.99, image: "/images/ArtisanCheese.jpg", description: "Hand-crafted artisan cheese, perfect for your cheese board or cooking." },
+  { id: 4, name: "Butter", price: 20.49, image: "/images/Butter.jpg", description: "Creamy, golden butter made from the finest cream." },
+  { id: 5, name: "Cream", price: 40.49, image: "/images/Cream.jpg", description: "Rich, velvety cream perfect for cooking or topping desserts." },
+  { id: 6, name: "Ice Cream", price: 50.99, image: "/images/IceCream.jpg", description: "Delicious, creamy ice cream in various flavors." },
+  { id: 7, name: "Cottage Cheese", price: 80.79, image: "/images/CottageCheese.jpg", description: "Fresh, protein-rich cottage cheese, great for snacks or cooking." },
+  { id: 8, name: "Whipped Cream", price: 100.99, image: "/images/WhippedCream.jpg", description: "Light and fluffy whipped cream, perfect for desserts." },
 ]
 
 export default function Products() {
@@ -37,7 +37,7 @@ export default function Products() {
               <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
               <p className="text-gray-600 mb-4">Fresh from our local dairy farms.</p>
               <div className="flex justify-between items-center mb-2">
-                <span className="text-blue-600 font-bold">${product.price.toFixed(2)}</span>
+                <span className="text-blue-600 font-bold">₹{product.price.toFixed(2)}</span>
               </div>
               <button
                 onClick={() => setSelectedProduct(product)}
