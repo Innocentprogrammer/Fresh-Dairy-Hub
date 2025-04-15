@@ -5,6 +5,8 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Info } from 'lucide-react'
 import ProductDetailsModal from '../components/ProductDetailsModal'
+import type { Product } from "../types/product";
+
 
 const products = [
   { id: 1, name: "Fresh Milk", price: 60.99, image: "/images/FreshMilk.jpg", description: "Farm-fresh milk, rich in nutrients and perfect for your daily needs." },
@@ -17,13 +19,6 @@ const products = [
   { id: 8, name: "Whipped Cream", price: 100.99, image: "/images/WhippedCream.jpg", description: "Light and fluffy whipped cream, perfect for desserts." },
 ]
 
-type Product = {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  description: string;
-};
 
 export default function Products() {
   const [selectedProduct, setSelectedProduct] = useState<Product| null>(null)
