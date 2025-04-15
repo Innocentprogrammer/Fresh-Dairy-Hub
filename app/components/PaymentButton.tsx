@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import type { CartItem } from "../types/cart"; // if it's nearby
 
 interface PaymentButtonProps {
   amount: number;
