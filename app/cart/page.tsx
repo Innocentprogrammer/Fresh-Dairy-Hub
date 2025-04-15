@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useAppContext } from '../context/AppContext'
 import PaymentButton from '../components/PaymentButton'
+import type { CartItem } from "../types/cart"; // if it's nearby
 
 export default function Cart() {
   const { cart, removeFromCart, clearCart } = useAppContext()
@@ -87,7 +88,7 @@ export default function Cart() {
               
               <PaymentButton 
                 amount={total + 50} 
-                cartItems={cart}
+                cartItems={cart as unknown as CartItem[]}
                 onSuccess={handlePaymentSuccess}
               />
             </div>
