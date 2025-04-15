@@ -5,7 +5,9 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Info } from 'lucide-react'
 import ProductDetailsModal from '../components/ProductDetailsModal'
-import type { Product } from "../types/product";
+// import { useState } from "react";
+import type { Product } from "../types/product"; // adjust path as needed
+
 
 
 const products = [
@@ -19,9 +21,9 @@ const products = [
   { id: 8, name: "Whipped Cream", price: 100.99, image: "/images/WhippedCream.jpg", description: "Light and fluffy whipped cream, perfect for desserts." },
 ]
 
-
 export default function Products() {
-  const [selectedProduct, setSelectedProduct] = useState<Product| null>(null)
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  // const [selectedProduct, setSelectedProduct] = useState(null)
 
   return (
     <div className="container mx-auto px-6 py-8">
