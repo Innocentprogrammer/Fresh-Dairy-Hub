@@ -5,10 +5,15 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Info } from 'lucide-react'
 import ProductDetailsModal from '../components/ProductDetailsModal'
-// import { useState } from "react";
-import type { Product } from "../types/product"; // adjust path as needed
 
-
+// Define type
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  description: string;
+};
 
 const products = [
   { id: 1, name: "Fresh Milk", price: 60.99, image: "/images/FreshMilk.jpg", description: "Farm-fresh milk, rich in nutrients and perfect for your daily needs." },
@@ -21,9 +26,9 @@ const products = [
   { id: 8, name: "Whipped Cream", price: 100.99, image: "/images/WhippedCream.jpg", description: "Light and fluffy whipped cream, perfect for desserts." },
 ]
 
+
 export default function Products() {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  // const [selectedProduct, setSelectedProduct] = useState(null)
+  const [selectedProduct, setSelectedProduct] = useState(null)
 
   return (
     <div className="container mx-auto px-6 py-8">
@@ -44,7 +49,7 @@ export default function Products() {
                 <span className="text-blue-600 font-bold">₹{product.price.toFixed(2)}</span>
               </div>
               <button
-                onClick={() => setSelectedProduct(product)}
+                onClick={() => setSelectedProduct(product as Product)}
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 flex items-center justify-center"
               >
                 <Info className="mr-2" size={16} />
