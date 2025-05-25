@@ -61,7 +61,7 @@ export default function ProductDetailsModal({ product, onClose }: ProductDetails
           />
           <p className="text-gray-600 mb-4">{product.description}</p>
           <div className="flex justify-between items-center mb-4">
-            <span className="text-2xl font-bold text-blue-600">${product.price.toFixed(2)}</span>
+            <span className="text-2xl font-bold text-blue-600">₹{product.price.toFixed(2)}</span>
           </div>
           <button
             onClick={() => {
